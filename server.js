@@ -17,7 +17,7 @@ const cfg = {
     listen: '0.0.0.0', port,
     protocol: 'vless',
     settings: { clients: [{ id: uuid }], decryption: 'none' },
-    streamSettings: { network: 'ws', wsSettings: { path: wsPath } },
+    streamSettings: { network: 'xhttp', xhttpSettings: { path: wsPath, mode: 'auto' } },
     sniffing: { enabled: true, destOverride: ['http', 'tls', 'quic'] }
   }],
   outbounds: [
